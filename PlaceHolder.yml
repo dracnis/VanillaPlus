@@ -1,0 +1,27 @@
+1:
+ #Type "BASE" is default type so can remove this line
+ TYPE: "BASE"
+ PLACEHOLDER: "VPP"
+ REPLACEMENT: "&8[&cVanillaPlus&8]&7 "
+2:
+ PLACEHOLDER: "twitter"
+ REPLACEMENT: "Soreth__"
+3:
+ PLACEHOLDER: "networkname"
+ REPLACEMENT: "VPServer"
+4:
+ PLACEHOLDER: "tipsurl"
+ REPLACEMENT: "http://www.paypal.me/Soreth"
+5:
+ PLACEHOLDER: "twitterurl"
+ REPLACEMENT: "https://twitter.com/Soreth__"
+#POWERED
+#6:
+# TYPE: "COMPONENT"
+# PLACEHOLDER: "VPPBB"
+# REPLACEMENT: "FORMAT.VPPBB"
+#POWERED
+#7:
+# TYPE: "COMPONENT"
+# PLACEHOLDER: "currencytag"
+# REPLACEMENT: "FORMAT.CURRENCY"

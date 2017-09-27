@@ -1,0 +1,93 @@
+SETTINGS:
+ #This is the message sent when a player unlock a title.
+ #%title_name% will display the title's name.
+ #%title_lore% will display the title's lore.
+ UNLOCK: TITLE.UNLOCK
+ #Is the storage's prefix you want use for your table. Result will look like this : [prefix]title.
+ PREFIX: "VPPlayer"
+ CURRENT: 
+  TYPE: BASE
+  CLOSE: false
+  MOVE: false
+  IS_STATIC: false
+  NAME_PATH: TITLE.OWNED.NAME
+  LORE_PATH:
+  - FORMAT.SPACE
+  - TITLE.OWNED.LORE
+  - FORMAT.SPACE
+  - TITLE.CURRENT
+  - FORMAT.SPACE
+  ITEM:
+   MATERIAL: dye
+   DATA: 10
+   ENCHANT: 
+    DURABILITY : 1
+   FLAG_LIST:
+    - HIDE_ENCHANTS
+ OWNED: 
+  TYPE: BASE
+  CLOSE: false
+  MOVE: false
+  IS_STATIC: false
+  NAME_PATH: TITLE.OWNED.NAME
+  LORE_PATH:
+  - FORMAT.SPACE
+  - TITLE.OWNED.LORE
+  - FORMAT.SPACE
+  - TITLE.OWNED.LORE2
+  - FORMAT.SPACE
+  ITEM:
+   MATERIAL: dye
+   DATA: 10
+ UNOWNED: 
+  TYPE: BASE
+  CLOSE: false
+  MOVE: false
+  IS_STATIC: false
+  NAME_PATH: TITLE.UNOWNED.NAME
+  LORE_PATH:
+  - FORMAT.SPACE
+  - TITLE.OWNED.LORE
+  - FORMAT.SPACE
+  - TITLE.UNOWNED.LORE
+  - FORMAT.SPACE
+  ITEM:
+   MATERIAL: dye
+   DATA: 8
+TITLE_LIST:
+ 1:
+  NAME_PATH: TITLE.1.NAME
+  LORE_PATH: TITLE.1.LORE
+  LEVEL: 1
+ 2:
+  NAME_PATH: TITLE.2.NAME
+  LORE_PATH: TITLE.2.LORE
+  LEVEL: 2
+ 3:
+  NAME_PATH: TITLE.3.NAME
+  LORE_PATH: TITLE.3.LORE
+  LEVEL: 3
+ 4:
+  NAME_PATH: TITLE.4.NAME
+  LORE_PATH: TITLE.4.LORE
+  LEVEL: 4
+ 5:
+  NAME_PATH: TITLE.5.NAME
+  LORE_PATH: TITLE.5.LORE
+  LEVEL: 5
+ 6:
+  NAME_PATH: TITLE.6.NAME
+  LORE_PATH: TITLE.6.LORE
+  LEVEL: 6
+ 7:
+  NAME_PATH: TITLE.7.NAME
+  LORE_PATH: TITLE.7.LORE
+  LEVEL: 7
+ 8:
+  NAME_PATH: TITLE.8.NAME
+  LORE_PATH: TITLE.8.LORE
+  LEVEL: 2
+ 9:
+  NAME_PATH: TITLE.9.NAME
+  LORE_PATH: TITLE.9.LORE
+  LEVEL: 6
