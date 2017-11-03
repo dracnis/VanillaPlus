@@ -1,0 +1,162 @@
+SETTINGS:
+ #This is the message's path for the message sent when a player unlock an achievement.
+ ANNOUNCE: "ACHIEVEMENT.ANNOUNCE"
+ #Is the storage you want use for save your titles.
+ STORAGE: main
+ #Should try to unlock achievement when player join ?
+ ACHIEVEMENT_ON_JOIN: true
+DISPLAY:
+ 1:
+  OWNED:
+   TYPE: BASE
+   NAME_PATH: ACHIEVEMENT.OWNED.NAME
+   LORE_PATH:
+   - FORMAT.SPACE
+   - ACHIEVEMENT.OWNED.LORE
+   - FORMAT.SPACE
+   - ACHIEVEMENT.OWNED.LORE2
+   ITEM: 
+    MATERIAL: wool
+    DATA: 5
+  UNOWNED: 
+   TYPE: BASE
+   NAME_PATH: ACHIEVEMENT.UNOWNED.NAME
+   LORE_PATH:
+   - FORMAT.SPACE
+   - ACHIEVEMENT.OWNED.LORE
+   - FORMAT.SPACE
+   - ACHIEVEMENT.PROGRESSION
+   ITEM:
+    MATERIAL: wool
+    DATA: 8
+ 2:
+  OWNED:
+   TYPE: BASE
+   NAME_PATH: ACHIEVEMENT.OWNED.NAME
+   LORE_PATH:
+   - FORMAT.SPACE
+   - ACHIEVEMENT.OWNED.LORE
+   - FORMAT.SPACE
+   - ACHIEVEMENT.OWNED.LORE2
+   ITEM: 
+    MATERIAL: dye
+    DATA: 10
+  UNOWNED: 
+   TYPE: BASE
+   NAME_PATH: ACHIEVEMENT.UNOWNED.NAME
+   LORE_PATH:
+   - FORMAT.SPACE
+   - ACHIEVEMENT.OWNED.LORE
+   - FORMAT.SPACE
+   - ACHIEVEMENT.PROGRESSION
+   ITEM:
+    MATERIAL: dye
+    DATA: 8
+ 3:
+  OWNED:
+   TYPE: BASE
+   NAME_PATH: ACHIEVEMENT.OWNED.NAME
+   LORE_PATH:
+   - FORMAT.SPACE
+   - ACHIEVEMENT.OWNED.LORE
+   - FORMAT.SPACE
+   - ACHIEVEMENT.OWNED.LORE2
+   ITEM: 
+    MATERIAL: dye
+    DATA: 10
+  UNOWNED: 
+   TYPE: BASE
+   IS_STATIC: false
+   NAME_PATH: ACHIEVEMENT.UNOWNED.NAME
+   LORE_PATH:
+   - FORMAT.SPACE
+   - ACHIEVEMENT.OWNED.LORE
+   ITEM:
+    MATERIAL: dye
+    DATA: 8
+
+#List of achievement
+ACHIEVEMENT_LIST:
+ #Id, negative for disable saving ( wiil be reset if player is unloaded ), positive for saved one, don't use 0 it's reserved value
+ 1:
+  NAME_PATH: ACHIEVEMENT.1.NAME
+  LORE_PATH: ACHIEVEMENT.1.LORE
+  ANNOUNCE: true
+  LISTEN:
+   - 1
+  REQUIREMENT:
+   1:
+    TYPE: STAT
+    ID: 1
+    AMOUNT: 1
+    KEEP: true
+    RESET: false
+    FORMAT: REQUIREMENT.STAT.1
+  REWARD:
+   coin:
+    TYPE: CURRENCY
+    ID: 1
+    AMOUNT: 100
+   title:
+    TYPE: TITLE
+    ID: 1
+#   menu: menu
+#   buildup: buildup
+ 2:
+  NAME_PATH: ACHIEVEMENT.2.NAME
+  LORE_PATH: ACHIEVEMENT.2.LORE
+  ANNOUNCE: true
+  LISTEN:
+   - 1
+  REQUIREMENT:
+   1:
+    TYPE: STAT
+    ID: 1
+    AMOUNT: 2
+    KEEP: true
+    FORMAT: REQUIREMENT.STAT.1
+  REWARD:
+   coin:
+    TYPE: CURRENCY
+    ID: 1
+    AMOUNT: 200
+ 3:
+  NAME_PATH: ACHIEVEMENT.3.NAME
+  LORE_PATH: ACHIEVEMENT.3.LORE
+  ANNOUNCE: true
+  LISTEN:
+   - 1
+  REQUIREMENT:
+   1:
+    TYPE: STAT
+    ID: 1
+    AMOUNT: 10
+    KEEP: true
+    RESET: false
+    FORMAT: REQUIREMENT.STAT.1
+  REWARD:
+   coin:
+    TYPE: CURRENCY
+    ID: 1
+    AMOUNT: 1000
+   title:
+    TYPE: TITLE
+    ID: 8
+ 4:
+  NAME_PATH: ACHIEVEMENT.4.NAME
+  LORE_PATH: ACHIEVEMENT.4.LORE
+  ANNOUNCE: true
+  LISTEN:
+   - 1
+  REQUIREMENT:
+   1:
+    TYPE: STAT
+    ID: 1
+    AMOUNT: 1000
+    KEEP: true
+    RESET: false
+    FORMAT: REQUIREMENT.STAT.1
+  REWARD:
+   title:
+    TYPE: TITLE
+    ID: 9

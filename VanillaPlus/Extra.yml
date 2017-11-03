@@ -1,0 +1,112 @@
+FOOD_LIST:
+ apple:
+  SATURATION: 9
+  FOOD: 4
+  ABSORPTION: 4
+  SOUND: BURP
+  EFFECT_LIST:
+   REGENERATION:
+    DURATION: 6
+    LEVEL: 2
+    AMBIANT: false
+    PARTICLE: false
+   ABSORPTION:
+    DURATION: 120
+    LEVEL: 1
+    AMBIANT: false
+    PARTICLE: false 
+ napple:
+  SATURATION: 9
+  FOOD: 4
+  ABSORPTION: 20
+  SOUND: BURP
+  EFFECT_LIST:
+   REGENERATION:
+    DURATION: 20
+    LEVEL: 3
+    AMBIANT: false
+    PARTICLE: false
+   ABSORPTION:
+    DURATION: 120
+    LEVEL: 1
+    AMBIANT: false
+    PARTICLE: false
+   DAMAGE_RESISTANCE:
+    DURATION: 300
+   FIRE_RESISTANCE:
+    DURATION: 300
+ godapple:
+  SATURATION: 20
+  FOOD: 20
+  ABSORPTION: 100
+  SOUND: GHAST_SCREAM
+  EFFECT_LIST:
+   REGENERATION:
+    DURATION: 60
+    LEVEL: 4
+    AMBIANT: false
+    PARTICLE: false
+   ABSORPTION:
+    DURATION: 120
+   DAMAGE_RESISTANCE:
+    DURATION: 300
+    LEVEL: 4
+   FIRE_RESISTANCE:
+    DURATION: 300
+   SPEED:
+    DURATION: 300
+    LEVEL: 2
+   INCREASE_DAMAGE:
+    DURATION: 300
+    LEVEL: 2
+REMOVE_LIST:
+ iron:
+  MATERIAL: IRON_INGOT
+RECIPE_LIST:
+ godapple:
+  ITEM:
+   MATERIAL: goldenapple
+   EXTRA:
+    EXTRA_TYPE: godapple
+   NAME: "&8[&6God apple&8]"
+  TYPE: "SHAPED"
+  SHAPE:
+   - AAA
+   - ABA
+   - AAA
+  ITEM_LIST:
+   A: diamond_block
+   B: apple
+ diamond:
+  ITEM:
+   MATERIAL: diamond
+   AMOUNT: 1
+  TYPE: FURNACE
+  FROM: coal block
+ idiot:
+  ITEM:
+   MATERIAL: diamond
+   AMOUNT: 1
+   NAME: "&4Idiocratie"
+  TYPE: SHAPELESS
+  ITEM_LIST:
+   diamond: 2
+BLOCK:
+ 8:
+  EXPLODE: true
+  RESISTANCE: 40
+ 9:
+  EXPLODE: true
+  RESISTANCE: 40
+ 10:
+  EXPLODE: true
+  RESISTANCE: 60
+ 11:
+  EXPLODE: true
+  RESISTANCE: 60
+ 49:
+  EXPLODE: true
+ 14:
+  EXPLODE: false
+ 56:
+  EXPLODE: false

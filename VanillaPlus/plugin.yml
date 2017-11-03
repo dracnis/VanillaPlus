@@ -1,0 +1,6 @@
+name: VanillaPlus
+description: A most for any custom server.
+main: fr.soreth.VanillaPlus.VanillaPlus
+version: 0.1
+author: Soreth
+softdepend: [LuckPerms,ExtensionBungee]
