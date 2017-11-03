@@ -1,0 +1,70 @@
+#The default server language, if not set English will be used.
+LANG: en_GB
+#All the additional languages on your server. If you don't want translation you can remove this.
+LANG_LIST:
+ - fr_FR 
+ 
+CONSOLE_NAME: "@Console"
+MENU:
+ #Anti spam click delay in millisecond. Default is 1000.
+ DELAY: 500
+ #If you want use menu in a player inventory, useful on lobby server, rp server or if you want non-premium inventory's size.
+ #You can try Lobby or Restriction.
+ #PLAYER_MENU: Lobby
+MESSAGE_COMPONENT:
+ #Will be used when need display state.
+ ENABLED: FORMAT.ENABLED
+ DISABLED: FORMAT.DISABLED
+ #In time you can add value placeholder for specified value.
+ SECOND_NULL: FORMAT.SECOND_NULL
+ #Will be used when no second.
+ SECOND_ONE: FORMAT.SECOND_ONE
+ #Will be used when one second.
+ SECOND: FORMAT.SECOND
+ #Will be used when some second.
+ MINUTE_NULL: FORMAT.MINUTE_NULL
+ MINUTE_ONE: FORMAT.MINUTE_ONE
+ MINUTE: FORMAT.MINUTE
+ #Same but for minute.
+ HOUR_NULL: FORMAT.HOUR_NULL
+ HOUR_ONE: FORMAT.HOUR_ONE
+ HOUR: FORMAT.HOUR
+ #Same but for hour.
+PLAYER:
+ #Message path, sent when a player join. `sender` `[tag]` added for sender placeholder, `sender` is the player who join.
+ JOIN: PLAYER.JOIN
+ #Message path, sent when a player join and only to this one.
+ PJOIN: PLAYER.PJOIN
+ #Message path, sent when a player leave. `sender` `[tag]` added for sender placeholder, `sender` is the player who leave.
+ LEAVE: PLAYER.LEAVE
+ #This is display type, hard config start here, by default you only have BASE type. You can add other plugin that add other type.
+ TAB_DISPLAY: BASE
+ #This is integer, the higher it is the last it will be displayed on tab, if you use higher than default group priority
+ #nicknamed will be displayed after other player on tab so I command use same as default group level on your server
+ NICK_TEAM: 1000
+ #If you don't use default group priority for nicknamed player use this to edit prefix. If size longer than 16 char keep only 16 first char.
+ NICK_PREFIX: "&7"
+ #If you don't use default group priority for nicknamed player use this to edit suffix. If size longer than 16 char keep only 16 first char.
+ NICK_SUFFIX: "&f"
+ #Allow you edit server spawn-point, if player is teleport same tick as first connection he become invisible, that's why you have short amount of time before teleport.
+ SERVER_SPAWN:
+  WORLD: world
+  X: 0.5
+  Y: 61
+  Z: 0.5
+  YAW: 0.0
+  PITCH: 0.0
+ #How many time we need to keep player in memory if offline, in minute.
+ KEEP_IN_MEMORY: 5
+ #This is the requirement for send JOIN and LEFT message.
+ MESSAGE_REQUIREMENT: PREMIUM && !NICK
+ #This is the requirement to see errors on join.
+ ERROR_REQUIREMENT: ADMIN
+ #This is the requirement to bypass private message restriction.
+ BYPASS_PM_REQUIREMENT: ADMIN
+ #This is the requirement to bypass teleport on join.
+ BYPASS_SPAWN_TP: ADMIN
+ #This is the requirement to use game-mode 3 teleport.
+ GM_TELEPORT: ADMIN
+ #This is the name of storage used for store main information on player. If not found will try to use first created storage.
+ STORAGE: main
