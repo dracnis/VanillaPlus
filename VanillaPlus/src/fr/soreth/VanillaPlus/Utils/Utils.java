@@ -1,6 +1,5 @@
 package fr.soreth.VanillaPlus.Utils;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -144,22 +143,24 @@ public class Utils {
 	}
 	@SuppressWarnings("rawtypes")
 	public static <T extends Enum> T matchEnum(T[] enumList, String input, boolean log) {
-		if (input == null || enumList == null) return null;
-		
-		input = input.toLowerCase().replaceAll(" ", "")
-				.replaceAll("-", "")
-				.replaceAll("_", "");
-		for(T type : enumList){
-			if(type.name().replaceAll(" ", "").replaceAll("-", "")
-					.replaceAll("_", "").equalsIgnoreCase(input))
-				return type;
-		}
+		T result = firstEnum(enumList, input);
+		if(result != null)
+			return result;
 		if(log)
-			ErrorLogger.addError(input + " isn't valid please use : " + toString(Arrays.asList(enumList),", "));
+			ErrorLogger.addMissingEnum(enumList, input);
 		return enumList.length == 0 ? null : enumList[0];
 	}
 	@SuppressWarnings("rawtypes")
 	public static <T extends Enum> T matchEnum(T[] enumList, String input, T defaultValue, boolean log) {
+		T result = firstEnum(enumList, input);
+		if(result != null)
+			return result;
+		if(log)
+			ErrorLogger.addMissingEnum(enumList, input);
+		return defaultValue;
+	}
+	@SuppressWarnings("rawtypes")
+	private static <T extends Enum> T firstEnum(T[] enumList, String input) {
 		if (input == null || enumList == null) return null;
 		
 		input = input.toLowerCase().replaceAll(" ", "")
@@ -170,10 +171,9 @@ public class Utils {
 					.replaceAll("_", "").equalsIgnoreCase(input))
 				return type;
 		}
-		if(log)
-			ErrorLogger.addError(input + " isn't valid please use : " + toString(Arrays.asList(enumList),", "));
-		return defaultValue;
+		return null;
 	}
+	
 	public static int makePositive(int i) {
 		return i < 0 ? i*-1 : i;
 	}

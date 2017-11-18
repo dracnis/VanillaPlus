@@ -5,7 +5,9 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map.Entry;
 
@@ -70,5 +72,16 @@ public class ErrorLogger {
 		player.sendMessage(Error.LOGGER.getMessage());
 		for(Entry<Instant, String> error : errors.entrySet())
 			player.sendMessage("§8[§c" + formatter.format(error.getKey()) + "§8]§7 : " + error.getValue());
+	}
+	@SuppressWarnings("rawtypes")
+	private static final List<Class>logged = new LinkedList<Class>();
+	@SuppressWarnings("rawtypes")
+	public static <T extends Enum> void addMissingEnum(T[] enumList, String input) {
+		if(logged.contains(enumList.getClass())) {
+			ErrorLogger.addError(input + " isn't valid please a valid " + enumList.getClass().getSimpleName());
+		}else {
+			ErrorLogger.addError(input + " isn't valid please use : " + Utils.toString(Arrays.asList(enumList),", "));
+			logged.add(enumList.getClass());
+		}
 	}
 }
